@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61089E2F-5ECE-42AD-B147-9B416899BBBD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HatDog.Train</RootNamespace>
+    <AssemblyName>HatDogTrain</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\SteamLibrary\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\HatDogTrain\bin\Win64_Shipping_Client\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="GameModel\DoNothingApplyWeatherEffectsModel.cs" />
+    <Compile Include="GameModel\HatDogTrainMoraleModel.cs" />
+    <Compile Include="GameModel\HatDogTrainSkillList.cs" />
+    <Compile Include="GameModel\SimplifyMultiplayerAgentApplyDamageModel.cs" />
+    <Compile Include="HatDogGame.cs" />
+    <Compile Include="Logic\Component\HatDogTrainAgentPollingComponent.cs" />
+    <Compile Include="Logic\HatDogTrainAgentAILogic.cs" />
+    <Compile Include="Logic\HatDogMissionDeployReSetLogic.cs" />
+    <Compile Include="Logic\HatDogTrainAgentLogic.cs" />
+    <Compile Include="GameModel\HatDogTrainAIAgentStatCalculateModel.cs" />
+    <Compile Include="HatDogTrainConst.cs" />
+    <Compile Include="HatDogTrainGameManager.cs" />
+    <Compile Include="HatDogTrainMissions.cs" />
+    <Compile Include="HatDogTrainSubModule.cs" />
+    <Compile Include="HatDogTrainViews.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Diagnostics.Tracing" />
+    <Reference Include="TaleWorlds.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TaleWorlds.DotNet, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.DotNet.dll</HintPath>
+    </Reference>
+    <Reference Include="TaleWorlds.Engine, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="TaleWorlds.Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="TaleWorlds.Localization, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="TaleWorlds.ModuleManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.ModuleManager.dll</HintPath>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.dll</HintPath>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade.View, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\Native\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.View.dll</HintPath>
+    </Reference>
+    <Reference Include="TaleWorlds.MountAndBlade.ViewModelCollection, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.MountAndBlade.ViewModelCollection.dll</HintPath>
+    </Reference>
+    <Reference Include="TaleWorlds.ObjectSystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SteamLibrary\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds.ObjectSystem.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

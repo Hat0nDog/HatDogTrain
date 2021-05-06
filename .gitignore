@@ -1,0 +1,3 @@
+*.sln
+.vs/*
+HatDogTrain/obj/*
